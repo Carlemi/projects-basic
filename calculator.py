@@ -7,15 +7,16 @@ que se soliciten al usuario y que el usuario ingrese
 # definiremos las variables a utilizar en cada función que serán globales
 save_num = 0
 values_to_op = []
-
+dato = 0
 #creamos la función por la cual le pediremos al usuario los valores con los que realizaremos las operaciones
 
 def ask_num():
    #pedimos al usuario la cantidad de números con los que operará
    global save_num  
-   save_num = float(input('Ingrese la cantidad de números con los que quiera operar: \n>>> '))
+   save_num = int(input('Ingrese la cantidad de números con los que quiera operar: \n>>> '))
    acumulator = 0
    global values_to_op
+   global dato
    #utilizamos un while para hacer la petición de los valores a operar 
    
    while save_num > acumulator:
@@ -25,15 +26,11 @@ def ask_num():
         print(f'Vas a operar {save_num} veces')
         dato = float(input('Por favor ingrese un número: '))
         values_to_op.append(float(dato))
-        
-
-        
-        
-      
       acumulator += 1
       #acumulator = save_num
+   #print(values_to_op)
       
-        
+
    
         
       
@@ -75,9 +72,10 @@ def show_menu():
 
 def multiplicate():
    global values_to_op
-
-   for multiplicar in (values_to_op):
-       values_to_op *= multiplicar
+   global dato
+   for multiplicar in range(len(values_to_op)):
+       values_to_op[multiplicar] = values_to_op[multiplicar] * dato
+       print(*values_to_op)
       
 #haremos una función que imprima todo mientras que el usuario haga todo de manera correcta como lo pide el programa
 
