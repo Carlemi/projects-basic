@@ -8,6 +8,7 @@ que se soliciten al usuario y que el usuario ingrese
 save_num = 0
 values_to_op = []
 dato = 0
+#result = 1
 #creamos la función por la cual le pediremos al usuario los valores con los que realizaremos las operaciones
 
 def ask_num():
@@ -51,21 +52,25 @@ def show_menu():
                               +'4 Restar\n'
                               + '5 Finalizar\n>>> Escriba el número correspondiente a la operación que desea realizar: '))
    
-    
-    if option_choice == 1 and option_choice :
-         print('Usted ha seleccionado multiplicar sus valores')
-
-    elif option_choice == 2:
-         print('Usted ha seleccionado dividir sus valores')
-    elif option_choice == 3:
-         print('Usted ha seleccionado sumar sus valores')
-    elif option_choice == 4:
-         print('Usted ha seleccionado restar sus valores')
-    elif option_choice == 5:
+    try:   
+      if option_choice == 1 and option_choice :
+         print('Usted ha seleccionado multiplicar sus valores\n')
+         print('y el resultado es\n>>>')
+      elif option_choice == 2:
+         print('Usted ha seleccionado dividir sus valores\n')
+         print('y el resultado es\n>>>')
+      elif option_choice == 3:
+         print('Usted ha seleccionado sumar sus valores\n')
+         print('y el resultado es\n>>>')
+      elif option_choice == 4:
+         print('Usted ha seleccionado restar sus valores\n')
+         print('y el resultado es\n>>>')
+      elif option_choice == 5:
          print('Gracias por participar hasta pronto....')
-    else:
+      else:
          print('Por favor escoja un número de la lista.')
-    
+    except NameError(ValueError):
+       print('Ups... no escribió un número...')
 #show_menu()
 
 # creamos la funcion para la multiplicación
@@ -73,9 +78,12 @@ def show_menu():
 def multiplicate():
    global values_to_op
    global dato
+   #global result 
+   
    for multiplicar in range(len(values_to_op)):
-       values_to_op[multiplicar] = values_to_op[multiplicar] * dato
-       print(*values_to_op)
+      #result = result * values_to_op[multiplicar]
+      values_to_op[multiplicar] =  values_to_op[multiplicar] * values_to_op[multiplicar]
+      print(values_to_op[multiplicar])
       
 #haremos una función que imprima todo mientras que el usuario haga todo de manera correcta como lo pide el programa
 
