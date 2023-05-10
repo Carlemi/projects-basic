@@ -79,11 +79,12 @@ def multiplicate():
    global values_to_op
    global dato
    #global result 
+   dato = 1
    
    for multiplicar in range(len(values_to_op)):
       #result = result * values_to_op[multiplicar]
-      values_to_op[multiplicar] =  values_to_op[multiplicar] * values_to_op[multiplicar]
-      print(values_to_op[multiplicar])
+      dato =  dato * values_to_op[multiplicar]
+      print(dato)
       
 #haremos una función que imprima todo mientras que el usuario haga todo de manera correcta como lo pide el programa
 
