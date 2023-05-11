@@ -8,7 +8,9 @@ que se soliciten al usuario y que el usuario ingrese
 save_num = 0
 values_to_op = []
 dato = 0
-#result = 1
+to_sum = 0
+to_subtract = 0
+
 #creamos la función por la cual le pediremos al usuario los valores con los que realizaremos las operaciones
 
 def ask_num():
@@ -18,6 +20,7 @@ def ask_num():
    acumulator = 0
    global values_to_op
    global dato
+   
    #utilizamos un while para hacer la petición de los valores a operar 
    
    while save_num > acumulator:
@@ -28,10 +31,8 @@ def ask_num():
         dato = float(input('Por favor ingrese un número: '))
         values_to_op.append(float(dato))
       acumulator += 1
-      #acumulator = save_num
-   #print(values_to_op)
       
-#ask_num()
+   
       
 # le mostramos el menú al usuario por pantalla para que él escoja que tipo de operación desea realizar 
 
@@ -95,22 +96,50 @@ def division():
 #esta será la función de sumar
 def adition():
    global values_to_op
-   global dato
-   #global result 
-   dato = 1
+   global to_sum
+  
    
    for suma in range(len(values_to_op)):
       #result = result * values_to_op[multiplicar]
-      dato =  dato + values_to_op[suma]
-      print(dato)
+      to_sum += values_to_op[suma]
+      print(to_sum)
+
+
+# esta será la función para restar
+def subtract():
+   global values_to_op
+   global to_subtract
+  
+   
+   for subt in range(len(values_to_op)):
+      #result = result * values_to_op[multiplicar]
+      to_subtract -= values_to_op[subt]
+      print(to_subtract)
+
 
 #haremos una función que imprima todo mientras que el usuario haga todo de manera correcta como lo pide el programa
 
 def print_all():
-    print(f'{ask_num()} {show_menu()} {multiplicate()} {division()} {adition()}')
+    
+    #to_return = 5
+    print(f'{ask_num()} {show_menu()}')
+    #while option_choice <= to_return:
+    if option_choice == 1:
+       print(f'{multiplicate()}')
+    elif option_choice == 2:
+      print(f'{division()}')
+    elif option_choice == 3:
+      print(f'{adition()}')
+    elif option_choice == 4:
+      print(f'{subtract()}')
+    else:
+      print('¿desea realizar otra operación?')
+       #to_return += 1
 
 
+       
 print_all()
+
 
 
 
