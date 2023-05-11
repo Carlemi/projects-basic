@@ -31,16 +31,8 @@ def ask_num():
       #acumulator = save_num
    #print(values_to_op)
       
-
-   
-        
-      
-      
 #ask_num()
       
-    
-
-
 # le mostramos el menú al usuario por pantalla para que él escoja que tipo de operación desea realizar 
 
 def show_menu():
@@ -85,14 +77,43 @@ def multiplicate():
       #result = result * values_to_op[multiplicar]
       dato =  dato * values_to_op[multiplicar]
       print(dato)
-      
+
+
+#esta será la función para la división 
+def division():
+   global values_to_op
+   global dato
+   #global result 
+   dato = 1
+   
+   for divisor in range(len(values_to_op)):
+      #result = result * values_to_op[multiplicar]
+      dato =  dato / values_to_op[divisor]
+      print(dato)
+
+
+#esta será la función de sumar
+def adition():
+   global values_to_op
+   global dato
+   #global result 
+   dato = 1
+   
+   for suma in range(len(values_to_op)):
+      #result = result * values_to_op[multiplicar]
+      dato =  dato + values_to_op[suma]
+      print(dato)
+
 #haremos una función que imprima todo mientras que el usuario haga todo de manera correcta como lo pide el programa
 
 def print_all():
-    print(f'{ask_num()} {show_menu()} {multiplicate()}')
+    print(f'{ask_num()} {show_menu()} {multiplicate()} {division()} {adition()}')
 
 
 print_all()
+
+
+
 
     
     
