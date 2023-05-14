@@ -1,0 +1,5 @@
+* Calculadora
+* Generador de contraseñas
+* Conversor de unidades
+* Adivinar número aleatorio
+* Analizador de texto
