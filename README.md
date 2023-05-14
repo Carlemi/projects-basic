@@ -5,7 +5,7 @@
 
 ### Adivinar el número que está generado de manera aleatoria
 
-**
+*
 Este es un programa que nos genera un número aleatorio y le pide al usuario
 que ingrese un número para ver si el número que el ingresa es el número que se generó
-**
+*
