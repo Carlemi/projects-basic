@@ -3,6 +3,7 @@ aquí vamos a programar una calculadora sencilla, que realice operaciones sencil
 y principales como sumar, restar, multiplicar y dividir con valores
 que se soliciten al usuario y que el usuario ingrese
 '''
+from functools import reduce
 
 # definiremos las variables a utilizar en cada función que serán globales
 save_num = 0
@@ -24,7 +25,7 @@ def ask_num():
    #utilizamos un while para hacer la petición de los valores a operar 
    
    while save_num > acumulator:
-      if save_num <= 0:
+      if save_num == 0:
         print('Por favor ingrese un número mayor que cero para poder continuar con el programa...')
       elif save_num > 0:
         print(f'Vas a operar {save_num} veces')
@@ -33,7 +34,7 @@ def ask_num():
       acumulator += 1
       
    
-      
+ask_num()
 # le mostramos el menú al usuario por pantalla para que él escoja que tipo de operación desea realizar 
 
 def show_menu():
@@ -67,8 +68,10 @@ def show_menu():
 #show_menu()
 
 # creamos la funcion para la multiplicación
+def multiply(dato):
+   return dato * dato
 
-def multiplicate():
+'''def multiplicate():
    global values_to_op
    global dato
    #global result 
@@ -77,11 +80,13 @@ def multiplicate():
    for multiplicar in range(len(values_to_op)):
       #result = result * values_to_op[multiplicar]
       dato =  dato * values_to_op[multiplicar]
-      print(dato)
+      print(dato)'''
 
 
 #esta será la función para la división 
-def division():
+def dividir(dato):
+    return dato / dato
+'''def division():
    global values_to_op
    global dato
    #global result 
@@ -90,11 +95,13 @@ def division():
    for divisor in range(len(values_to_op)):
       #result = result * values_to_op[multiplicar]
       dato =  dato / values_to_op[divisor]
-      print(dato)
+      print(dato)'''
 
 
 #esta será la función de sumar
-def adition():
+def sumar(dato):
+    return dato + dato
+'''def adition():
    global values_to_op
    global to_sum
   
@@ -102,11 +109,13 @@ def adition():
    for suma in range(len(values_to_op)):
       #result = result * values_to_op[multiplicar]
       to_sum += values_to_op[suma]
-      print(to_sum)
+      print(to_sum)'''
 
 
 # esta será la función para restar
-def subtract():
+def restar(dato):
+    return dato - dato
+'''def subtract():
    global values_to_op
    global to_subtract
   
@@ -114,31 +123,15 @@ def subtract():
    for subt in range(len(values_to_op)):
       #result = result * values_to_op[multiplicar]
       to_subtract -= values_to_op[subt]
-      print(to_subtract)
+      print(to_subtract)'''
 
 
 #haremos una función que imprima todo mientras que el usuario haga todo de manera correcta como lo pide el programa
-
-def print_all():
+ask_num()
+show_menu()
+print(reduce(sumar, values_to_op))
     
-    #to_return = 5
-    print(f'{ask_num()} {show_menu()}')
-    #while option_choice <= to_return:
-    if option_choice == 1:
-       print(f'{multiplicate()}')
-    elif option_choice == 2:
-      print(f'{division()}')
-    elif option_choice == 3:
-      print(f'{adition()}')
-    elif option_choice == 4:
-      print(f'{subtract()}')
-    else:
-      print('¿desea realizar otra operación?')
-       #to_return += 1
-
-
-       
-print_all()
+ 
 
 
 
