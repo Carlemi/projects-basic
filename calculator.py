@@ -46,24 +46,24 @@ def show_menu():
                               + '5 Finalizar\n>>> Escriba el número correspondiente a la operación que desea realizar: '))
    
     try:   
-      if option_choice == 1 and option_choice :
-         print('Usted ha seleccionado multiplicar sus valores\n')
-         print('y el resultado es\n>>>')
-      elif option_choice == 2:
-         print('Usted ha seleccionado dividir sus valores\n')
-         print('y el resultado es\n>>>')
-      elif option_choice == 3:
-         print('Usted ha seleccionado sumar sus valores\n')
-         print('y el resultado es\n>>>')
-      elif option_choice == 4:
-         print('Usted ha seleccionado restar sus valores\n')
-         print('y el resultado es\n>>>')
-      elif option_choice == 5:
-         print('Gracias por participar hasta pronto....')
-      else:
-         print('Por favor escoja un número de la lista.')
+        if option_choice == 1 and option_choice :
+             print('Usted ha seleccionado multiplicar sus valores\n')
+             print('y el resultado es\n>>>')
+        elif option_choice == 2:
+            print('Usted ha seleccionado dividir sus valores\n')
+            print('y el resultado es\n>>>')
+        elif option_choice == 3:
+            print('Usted ha seleccionado sumar sus valores\n')
+            print('y el resultado es\n>>>')
+        elif option_choice == 4:
+            print('Usted ha seleccionado restar sus valores\n')
+            print('y el resultado es\n>>>')
+        elif option_choice == 5:
+            print('Gracias por participar hasta pronto....')
+        else:
+            print('Por favor escoja un número de la lista.')
     except NameError(ValueError):
-       print('Ups... no escribió un número...')
+        print('Ups... no escribió un número...')
 #show_menu()
 
 # creamos la funcion para la multiplicación
