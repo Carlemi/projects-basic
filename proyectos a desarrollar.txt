@@ -3,3 +3,7 @@
 * Conversor de unidades
 * Adivinar número aleatorio
 * Analizador de texto
+
+
+*Formulas para convertir unidades:
+-
