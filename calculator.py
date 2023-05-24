@@ -45,7 +45,7 @@ def show_menu():
             print(f'El resultado es: {division}')
         elif option_choice == 3:
             print('Usted ha seleccionado sumar sus valores\n')
-            print(f'El resultado es: {reduce(sum_values, values_to_op)}')
+            print(f'El resultado es: {adition}')
         elif option_choice == 4:
             print('Usted ha seleccionado restar sus valores\n')
             print(f'El resultado es: {substract}')
@@ -72,8 +72,7 @@ division = reduce(lambda x, y: x / y, values_to_op)
 
 
 #esta será la función de sumar
-def sum_values(dato):
-    return dato + dato
+adition = reduce(lambda x, y: x + y, values_to_op)
 
 
 # esta será la función para restar
